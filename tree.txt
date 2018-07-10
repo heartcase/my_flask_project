@@ -1,0 +1,26 @@
+.\
+|   .gitignore
+|   config.py
+|   README.md
+|   requirements.txt
+|   run.py
+|   tree.txt
+|   
++---.idea
+|       misc.xml
+|       modules.xml
+|       my_flask_project.iml
+|       vcs.xml
+|       workspace.xml
+|       
+\---app
+    |   __init__.py
+    |   
+    +---models
+    |       __init__.py
+    |       
+    +---static
+    +---templates
+    \---views
+            __init__.py
+            
