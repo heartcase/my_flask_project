@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block navbar %}
+<div class="container">
+{{ super() }}
+</div>
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row clearfix">
+        <div class="col-md-4 column">
+			<form role="form" method="POST" enctype="multipart/form-data">
+				<div class="form-group">
+                    <label for="exampleInputFile">File input</label><input type="file" id="exampleInputFile" />
+					<p class="help-block">
+						Support csv files.
+					</p>
+                    <button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			</form>
+			<div class="progress">
+				<div class="progress-bar progress-success">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8 column">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>
+							Num
+						</th>
+						<th>
+                            Data Name
+						</th>
+						<th>
+							Size
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+                    {% for row in table %}
+					<tr>
+						<td>
+							{{row[0]}}
+						</td>
+						<td>
+							{{row[1]}}
+						</td>
+						<td>
+							{{row[2]}}
+						</td>
+					</tr>
+                    {% endfor %}
+				</tbody>
+			</table>
+			<ul class="pagination">
+				<li>
+					 <a href="?page=1">Prev</a>
+				</li>
+				<li>
+					 <a href="?page=1">1</a>
+				</li>
+				<li>
+					 <a href="?page=1">Next</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock %}
