@@ -1,2 +1,13 @@
 from flask import Flask
-app = Flask(__name__)
+from flask_bootstrap import Bootstrap
+from views.index import web_index
+
+app = Flask('web_app')
+Bootstrap(app)
+
+app.register_blueprint(web_index)
+
+app.run()
+
+
+
