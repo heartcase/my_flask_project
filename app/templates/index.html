@@ -1,9 +1,67 @@
 {% extends "base.html" %}
 {% block navbar %}
-    {{ super() }}
+<div class="container">
+{{ super() }}
+<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1>
+					If you've got time, try me!
+				</h1>
+				<p>
+					Get some data and let's have fun.
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="#">Start now</a>
+				</p>
+			</div>
+		</div>
+</div>
+</div>
 {% endblock %}
 {% block content %}
 <div class="container">
 
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+			<h2>
+				Uploads your data
+			</h2>
+			<p>
+				Prepare the input files, we currently support csv formats.
+			</p>
+
+
+
+			<p>
+				 <a class="btn" href="#">Try it »</a>
+			</p>
+		</div>
+		<div class="col-md-4 column">
+			<h2>
+				Run a task
+			</h2>
+			<p>
+				We have a sample task for 2 dimensional linear regression. We can add more tasks in the future, but that will be a story for another day.
+			</p>
+
+
+			<p>
+				 <a class="btn" href="#">Try it »</a>
+			</p>
+		</div>
+		<div class="col-md-4 column">
+			<h2>
+				Plot
+			</h2>
+			<p>
+				We use echarts to show your result. Just make your data a little bit nicer and more friendly to people like us.
+			</p>
+
+			<p>
+				 <a class="btn" href="#">Try it »</a>
+			</p>
+		</div>
+	</div>
 </div>
 {% endblock %}

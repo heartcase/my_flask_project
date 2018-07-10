@@ -6,8 +6,6 @@ app = Flask('web_app')
 Bootstrap(app)
 
 app.register_blueprint(web_index)
-
 app.run()
-
 
 

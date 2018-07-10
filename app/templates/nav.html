@@ -4,8 +4,10 @@
     {% set active_b = 'active'%}
 {% elif request.path == '/charts/' %}
     {% set active_c = 'active'%}
+{% elif request.path == '/tasks/' %}
+    {% set active_d = 'active'%}
 {% endif %}
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default " role="navigation">
 	<div class="container-fluid">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -21,17 +23,16 @@
             <li class="{{active_a}}" ><a href="/">Home</a></li>
             <li class="{{active_b}}" ><a href="/dataframes/">DataFrames</a></li>
             <li class="{{active_c}}" ><a href="/charts/">Charts</a></li>
+			<li class="{{active_d}}" ><a href="/tasks/">Tasks</a></li>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					Job <b class="caret"></b>
+					Workplace <b class="caret"></b>
 				</a>
 				<ul class="dropdown-menu">
-					<li><a href="#">Uploads Data</a></li>
-					<li><a href="#">Submit Job</a></li>
+					<li><a href="#">Projects</a></li>
+					<li><a href="#">Profile</a></li>
 					<li class="divider"></li>
-					<li><a href="#">Job List</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Log</a></li>
+					<li><a href="#">Logout</a></li>
 				</ul>
 			</li>
 		</ul>
